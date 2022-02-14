@@ -34,10 +34,10 @@ print('FQDN = ' +str(fqdn))
 print('')
 
 rev_text('[Checking ports 21,25,80,443]')
+port_check(ip,21)
+port_check(ip,25)
 port_check(ip,80)
 port_check(ip,443)
-port_check(ip,25)
-port_check(ip,21)
 print('')
 
 rev_text('[Checking MX]')
