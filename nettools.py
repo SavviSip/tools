@@ -3,6 +3,10 @@ import os
 import sys
 import socket
 
+if len(sys.argv)<2:
+    print ('Usage: nettools.py www.example.com ' )
+    sys.exit(1)
+
 socket.setdefaulttimeout(0.5)
 host=str(sys.argv[1])
 ip=(socket.gethostbyname(host))
@@ -24,6 +28,7 @@ def rev_text(title):
     os.system('tput rev')
     print (title)
     os.system('tput sgr0')
+
 
 os.system('clear')
 print( 'Let\'s check some DNS stuff')
